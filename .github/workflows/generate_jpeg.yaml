@@ -1,0 +1,37 @@
+name: Generate Jpeg
+on: 
+  push:
+    paths:
+      - '**.tex'  # Only run when .tex files change
+
+jobs:
+  create-jpeg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Update packages
+        run: sudo apt update
+        
+      - name: Install dependencies
+        run: sudo apt install latexmk texlive-full imagemagick
+        
+      - name: Compile tex
+        run: |
+          # Assuming your main tex file is named resume.tex
+          latexmk -pdf resume.tex
+          
+      - name: Generate jpeg
+        run: convert -density 300 resume.pdf -quality 100 resume.jpeg 
+      
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+      - name: Add to git
+        run: |
+          git add resume.jpeg
+          git commit -m "Update resume.jpeg" || echo "No changes to commit"
+          git push

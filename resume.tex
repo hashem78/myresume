@@ -1,0 +1,195 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage[document]{ragged2e}
+
+
+\makeatother
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\linespread{1.07}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeText}[1]{
+  \large{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0.5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{2pt}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginDocument{\justify}
+\begin{document}
+
+
+%----------HEADING-----------------
+\begin{center}
+    \textbf{\huge \scshape Hashem Alayan} \\ \vspace{1pt}
+    \large \href{tel:+962798609212}{\underline{+962798609212}} $|$ \href{mailto:hashem.olayano@gmail.com}{\underline{hashem.olayano@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/hashem-alayan}{\underline{linkedin.com/in/hashem-alayan}} $|$
+    \href{https://github.com/hashem78}{\underline{github.com/hashem78}}
+\end{center}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.just.edu.jo/}{Jordan University of Science and Technology}}{Irbid, Jordan}
+      {Bachelor of Science in Computer Engineering;  GPA: 3.81/4.0 (95\%, Excellent)}{Sep. 2018 -- Jul. 2023}   
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+\small{
+    \textbf{Languages \& Frameworks}: Go \textbf{BubbleTea \& Templ}, Java \textbf{Spring, Servlets \& JSPs}, C\# \textbf{.NET} , Dart \textbf{Flutter}.
+    \\
+    \textbf{Back-end, Infrastructure \& Tools}: Grafana, OTEL, Loki, Terraform, Atlantis, Ansible, Puppet, Bash, Podman, Docker, Nginx, \textbf{Git}, GitHub \& GitHub Actions, MYSQL, MSSQL, JDBC, JPA.
+}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Software Engineer | Platform \& Reliability}{Jan. 2024 -- Present}
+      {Atypon Systems, A Wiley Brand - Full Time}{Amman, Jordan}
+      \resumeItemListStart
+       \resumeItem{
+            Improved developer productivity metrics 100x by migrating our 20M LoC mono-repo flagship product Literatum from SVN (subversion) source control to Git.
+        }
+        \resumeItem{
+            Saved our organization 1.3 million man-hours annually by cutting the compilation time of our flagship product Literatum by 80\% (from ~30 minutes to ~2 minutes) through metric-collection, caching, visualization, reporting, careful analysis and decisive action.
+        }
+        \resumeItem{
+          Eliminated developer toil by creating a TUI (terminal user interface) in GoLang with BubbleTea to rebuild our internal deployment utility (DeployServer) resulting in 100\% reduced failure rates and deadlocks and finer grained control on deployments.
+        }
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineer}{Feb. 2023 -- Jan. 2024}
+      {Labiba for Artificial Intelligence - Full Time}{Amman, Jordan}
+      \resumeItemListStart
+      \resumeItem{
+        Served 35 million users across billions of requests by building scalable back-end API services with .NET 6+, awarding Labiba a contract with a major government entity in Saudia Arabia.
+      }
+      \resumeItem{
+         Slashed 1000s in monthly costs by integrating self-hosted large language models (Falcon-50b \& LLaMa-13b) for semantic search, leveraging technologies like chromaDB and Redis, reducing dependency on costly external APIs.
+      }
+    \resumeItem{
+        Conducted code reviews, and enforced unit testing, commit, code and linting rules in addition to static analysis through Github actions, and implemented automatic deployment schemes for our .NET 6+ / Python projects reducing the time spend on deployments for new clients by 80\% from days to hours.
+    }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+    
+
+
+%-----------EXPERIENCE-----------------
+\section{Projects}
+   \resumeSubHeadingListStart
+   \resumeProjectHeading
+          {\href{https://englingo.com}{\textbf{Englingo}} $|$ \emph{Google Play/Apple Payments, Education, Mobile, Web, Flutter} • \href{https://englingo.com}{\underline{Website}}}{June 2024}
+          \resumeItemListStart
+                \resumeItem{
+                    Secured \$10K in funding to build the next generation of AI infused e-Learning experience for Turkish speakers looking to learn English creating a successful MVP. Utilized Flutter, Firebase and ChatGPT to create a truly one of a kind cross platform learning SaaS.
+                }
+          \resumeItemListEnd
+    \resumeProjectHeading
+          {\href{https://github.com/KrapiOrg}{\textbf{Krapi}} $|$ \emph{Micro Services, LevelDB, Concurrency, C++, Flutter} • \href{https://youtu.be/NvcLwSh_mIw}{\underline{Demo}} • \href{https://github.com/KrapiOrg}{\underline{Source Code}}}{April 2022 -- Feb. 2023}
+          \resumeItemListStart
+                \resumeItem{
+                    Developed a Block chain (C++) and block chain explorer implementation (Flutter), used industry standard protocols HTTP/1.1, TLS, Web Sockets and WebRTC to achieve a p2p network. Scored an A (Excellent) as my graduation project and resulted in ongoing work for a research paper.
+                }
+          \resumeItemListEnd
+             \resumeProjectHeading      
+        {\href{https://github.com/hashem78/hasha}{\textbf{Hasha}} $|$ \emph{C++, CLang, CMake, Git} • \href{https://github.com/hashem78/hasha}{\underline{Source Code}}}{Mar. 2022  -- June 2022}
+          \resumeItemListStart
+            \resumeItem{ Interpreted expression evaluation programming language written in modern C++ with a hand-written recursive-descent parser that supports functions, arbitrarily complex expressions and scoping.}
+          \resumeItemListEnd
+        \resumeProjectHeading 
+    {\href{https://github.com/hashem78/aussie}{\textbf{Aussie}} $|$ \emph{Mobile/Web, Python, Selenium} • \href{https://github.com/hashem78/aussie/tree/main\#screenshots}{\underline{Demo}} • \href{https://github.com/hashem78/aussie}{\underline{Source Code}}}{Feb. 2021  -- June 2021}
+          \resumeItemListStart
+                \resumeItem{
+                    3rd place winner in the Australian Embassy's app contest in Amman. Aimed at the MENA demographic, it curates bilingual content (Arabic \& English) about Australia. The backend boasts of a 2.2GB dataset, aggregated using Python and Selenium WebDriver scraping techniques from 100+ web sources, and is hosted on a Firebase NoSQL database.
+                }
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+ 
+%-------------------------------------------
+\end{document}
+
